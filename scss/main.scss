@@ -1,0 +1,24 @@
+@import 'compass';
+@import "compass/reset";
+
+/*$icons-spacing: 30px;*/
+$icons-layout: smart;
+@import "icons/*.png";
+
+.hide {
+  display: none!important;
+}
+
+.header {
+  &-nav {
+    &__list {
+      /* */
+    }
+    &__item {
+      /* */
+    }
+    &__link {
+      /* */
+    }
+  }
+}
