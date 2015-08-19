@@ -225,7 +225,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   background-position: 0 0;
   top: 54px;
-  left: 0px;
+  left: 0;
   width: 125px;
   height: 91px;
   position: absolute;
