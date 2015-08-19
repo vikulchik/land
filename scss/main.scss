@@ -1,24 +1,186 @@
 @import 'compass';
 @import "compass/reset";
 
-/*$icons-spacing: 30px;*/
+$icons-spacing: 30px;
 $icons-layout: smart;
 @import "icons/*.png";
 
 .hide {
   display: none!important;
 }
-
-.header {
-  &-nav {
-    &__list {
-      /* */
-    }
+.wrapper {
+  width: 1172px;
+  margin: auto;
+  font-family: arial, sans-serif;
+  .header-line {
+    height: 5px;
+    background-color: #fdbd1f;
+  }
+  .header-logo {
+    float: left;
+    width: 200px;
+    padding: 25px;
+  }
+  .header-nav {
+    float: right;
+    width: 536px;
     &__item {
-      /* */
+      text-transform: uppercase;
+      margin-left: 5px;
+      display: inline-block;
+      &:first-child {
+        margin-left: 0;
+      }
     }
     &__link {
-      /* */
+      color: #9e8e92;
+      font-size: 13px;
+      text-decoration: none;
+      padding: 35px 20px;
+      display: block;
+      transition: 0.5s;
+      &:hover {
+        color: white;
+        background-color: #fdbd1f;
+      }
+    }
+  }
+  .main-content {
+    position: relative;
+    text-align: center;
+    &__img {
+      min-height: 441px;
+    }
+    &__text, &__title {
+      position: absolute;
+      color: white;
+      font-size: 31px;
+      display: block;
+      background-color: #ab6f80;
+      padding: 10px;
+    }
+    &__text {
+      top: 182px;
+      left: 475px;
+      width: 203px;
+    }
+    &__title {
+      width: 483px;
+      top: 236px;
+      left: 329px;
+    }
+    &__info {
+      background-color: #fdbd1f;
+      position: relative;
+      padding: 58px 299px;
+      &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .title {
+        font-size: 24px;
+        color: white;
+        display: inline-block;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      .section {
+        color: white;
+        font-size: 20px;
+        display: inline-block;
+        margin-bottom: 35px;
+        line-height: 1.5;
+      }
+      .button, .button-first {
+        text-decoration: none;
+        color: #fdbd1f;
+        font-size: 20px;
+        background-color: #ab6f80;
+        display: inline-block;
+        padding: 15px 20px;
+        border-radius: 2px;
+        margin-left: 15px;
+        &:hover {
+          color: white;
+          background-color: #783045;
+        }
+      }
+      .button-first {
+        margin-left: 0;
+      }
+    }
+    &__events {
+      text-align: left;
+      position: relative;
+      &__title {
+        color: #ab6f80;
+        font-size: 24px;
+        display: block;
+        margin-bottom: 8px;
+      }
+      &__section {
+        font-size: 20px;
+        color: #fdbd1f;
+        display: block;
+        margin-bottom: 30px;
+      }
+      &__text{
+        color: #978489;
+        font-size: 15px;
+        display: block;
+        margin-bottom: 29px;
+        line-height: 1.5;
+        text-align: left;
+      }
+      &__button {
+        background-color: #fdbd1f;
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+      }
+      &-container{
+        width: 350px;
+        padding: 50px 63px 57px 150px;
+        float: left;
+        &:after {
+          content: '';
+          display: block;
+          @include icons-sprite(main-microphone);
+          top: 54px;
+          right: 488px;
+          width: 69px;
+          height: 99px;
+          position: absolute;
+        }
+      }
+      .right {
+        width: 373px;
+        border-left: 2px solid #e2e2df;
+        &:after {
+          content: '';
+          display: block;
+          @include icons-sprite(main-rocket);
+          top: 54px;
+          left: 0px;
+          width: 125px;
+          height: 91px;
+          position: absolute;
+        }
+      }
+    }
+    &__banner {
+      background-color: #ab6f80;
+      min-height: 350px;
+    }
+    .clear:after {
+      content: '';
+      display: block;
+      clear: both;
     }
   }
 }

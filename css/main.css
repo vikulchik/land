@@ -54,9 +54,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/*$icons-spacing: 30px;*/
-.icons-sprite {
-  background-image: url('../img/icons-sf7875a0d34.png');
+.icons-sprite, .wrapper .main-content__events-container:after, .wrapper .main-content__events .right:after {
+  background-image: url('../img/icons-s046769624c.png');
   background-repeat: no-repeat;
 }
 
@@ -64,14 +63,181 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: none !important;
 }
 
-.header-nav__list {
-  /* */
+.wrapper {
+  width: 1172px;
+  margin: auto;
+  font-family: arial, sans-serif;
 }
-.header-nav__item {
-  /* */
+.wrapper .header-line {
+  height: 5px;
+  background-color: #fdbd1f;
 }
-.header-nav__link {
-  /* */
+.wrapper .header-logo {
+  float: left;
+  width: 200px;
+  padding: 25px;
+}
+.wrapper .header-nav {
+  float: right;
+  width: 536px;
+}
+.wrapper .header-nav__item {
+  text-transform: uppercase;
+  margin-left: 5px;
+  display: inline-block;
+}
+.wrapper .header-nav__item:first-child {
+  margin-left: 0;
+}
+.wrapper .header-nav__link {
+  color: #9e8e92;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 35px 20px;
+  display: block;
+  transition: 0.5s;
+}
+.wrapper .header-nav__link:hover {
+  color: white;
+  background-color: #fdbd1f;
+}
+.wrapper .main-content {
+  position: relative;
+  text-align: center;
+}
+.wrapper .main-content__img {
+  min-height: 441px;
+}
+.wrapper .main-content__text, .wrapper .main-content__title {
+  position: absolute;
+  color: white;
+  font-size: 31px;
+  display: block;
+  background-color: #ab6f80;
+  padding: 10px;
+}
+.wrapper .main-content__text {
+  top: 182px;
+  left: 475px;
+  width: 203px;
+}
+.wrapper .main-content__title {
+  width: 483px;
+  top: 236px;
+  left: 329px;
+}
+.wrapper .main-content__info {
+  background-color: #fdbd1f;
+  position: relative;
+  padding: 58px 299px;
+}
+.wrapper .main-content__info__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.wrapper .main-content__info .title {
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.wrapper .main-content__info .section {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+.wrapper .main-content__info .button, .wrapper .main-content__info .button-first {
+  text-decoration: none;
+  color: #fdbd1f;
+  font-size: 20px;
+  background-color: #ab6f80;
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 2px;
+  margin-left: 15px;
+}
+.wrapper .main-content__info .button:hover, .wrapper .main-content__info .button-first:hover {
+  color: white;
+  background-color: #783045;
+}
+.wrapper .main-content__info .button-first {
+  margin-left: 0;
+}
+.wrapper .main-content__events {
+  text-align: left;
+  position: relative;
+}
+.wrapper .main-content__events__title {
+  color: #ab6f80;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 8px;
+}
+.wrapper .main-content__events__section {
+  font-size: 20px;
+  color: #fdbd1f;
+  display: block;
+  margin-bottom: 30px;
+}
+.wrapper .main-content__events__text {
+  color: #978489;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 29px;
+  line-height: 1.5;
+  text-align: left;
+}
+.wrapper .main-content__events__button {
+  background-color: #fdbd1f;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+.wrapper .main-content__events-container {
+  width: 350px;
+  padding: 50px 63px 57px 150px;
+  float: left;
+}
+.wrapper .main-content__events-container:after {
+  content: '';
+  display: block;
+  background-position: 0 -91px;
+  top: 54px;
+  right: 488px;
+  width: 69px;
+  height: 99px;
+  position: absolute;
+}
+.wrapper .main-content__events .right {
+  width: 373px;
+  border-left: 2px solid #e2e2df;
+}
+.wrapper .main-content__events .right:after {
+  content: '';
+  display: block;
+  background-position: 0 0;
+  top: 54px;
+  left: 0px;
+  width: 125px;
+  height: 91px;
+  position: absolute;
+}
+.wrapper .main-content__banner {
+  background-color: #ab6f80;
+  min-height: 350px;
+}
+.wrapper .main-content .clear:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 /*# sourceMappingURL=main.css.map */
