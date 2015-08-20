@@ -175,7 +175,47 @@ $icons-layout: smart;
     }
     &__banner {
       background-color: #ab6f80;
-      min-height: 350px;
+      padding: 61px 81px 56px 382px;
+      text-align: left;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        @include icons-sprite(main-phone);
+        width: 269px;
+        height: 231px;
+        position: absolute;
+        top: 60px;
+        left: 58px;
+      }
+      &-title {
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+      }
+      &-section {
+        font-size: 20px;
+        color: white;
+        display: block;
+        margin-bottom: 27px;
+      }
+      &-text {
+        font-size: 15px;
+        color: #fdbd1f;
+        line-height: 1.5;
+        display: block;
+        margin-bottom: 29px;
+      }
+      &-button {
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: #ab6f80;
+        background-color: white;
+        text-decoration: none;
+      }
     }
     .clear:after {
       content: '';
