@@ -61,7 +61,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .hide {
   background: yellow;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 
 .clear:after {
@@ -104,7 +105,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-decoration: none;
   padding: 35px 20px;
   display: block;
-  transition: 0.5s;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
 }
 .header-nav__link:hover {
   color: white;
@@ -331,9 +333,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   right: 0;
   border: 20px solid transparent;
   position: absolute;
-  transform: translateY(-50%) rotate(-90deg);
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
   top: 50%;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   font-size: 0;
 }
 .slider__slider .bx-next {
@@ -346,10 +351,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .slider__slider .bx-prev {
   border-top-color: #ab6f80;
   left: 0;
-  transform: translateY(-50%) rotate(90deg);
+  -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
 }
 .slider__slider .bx-prev:hover {
   border-top-color: #c79fab;
 }
-
-/*# sourceMappingURL=main.css.map */

@@ -30,6 +30,7 @@ gulp.task('autpr', function () {
 
 gulp.task('watch', function () {
     gulp.watch('scss/*.scss', ['compass']);
+    gulp.watch('css/*.css', ['autpr']);
 
 });
 
