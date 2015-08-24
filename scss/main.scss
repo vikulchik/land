@@ -6,7 +6,9 @@ $icons-layout: smart;
 @import "icons/*.png";
 
 .hide {
-  display: none !important;
+  //display: none !important;
+  background: yellow;
+  transition: 0.4s;
 }
 
 .clear:after {
@@ -21,9 +23,8 @@ $icons-layout: smart;
   font-family: arial, sans-serif;
 }
 
-.header-line {
-  height: 5px;
-  background-color: #fdbd1f;
+.app {
+  border-top: 5px solid #fdbd1f;
 }
 
 .header-logo {
@@ -85,28 +86,21 @@ $icons-layout: smart;
     background-color: #fdbd1f;
     position: relative;
     padding: 58px 299px;
-    &__content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-    .title {
+    &-title {
       font-size: 24px;
       color: white;
       display: inline-block;
       margin-bottom: 20px;
       font-weight: bold;
     }
-    .section {
+    &-section {
       color: white;
       font-size: 20px;
       display: inline-block;
       margin-bottom: 35px;
       line-height: 1.5;
     }
-    .button, .button-first {
+    &-button {
       text-decoration: none;
       color: #fdbd1f;
       font-size: 20px;
@@ -115,13 +109,15 @@ $icons-layout: smart;
       padding: 15px 20px;
       border-radius: 2px;
       margin-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
       &:hover {
         color: white;
         background-color: #783045;
       }
-    }
-    .button-first {
-      margin-left: 0;
     }
   }
   &__events {
@@ -172,19 +168,19 @@ $icons-layout: smart;
         height: 99px;
         position: absolute;
       }
-    }
-    .right {
-      width: 373px;
-      border-left: 2px solid #e2e2df;
-      &:after {
-        content: '';
-        display: block;
-        @include icons-sprite(main-rocket);
-        top: 54px;
-        left: 0;
-        width: 125px;
-        height: 91px;
-        position: absolute;
+      &--right {
+        width: 373px;
+        border-left: 2px solid #e2e2df;
+        &:after {
+          display: block;
+          @include icons-sprite(main-rocket);
+          top: 54px;
+          left: 0;
+          width: 125px;
+          height: 91px;
+          content: '';
+          position: absolute;
+        }
       }
     }
   }
@@ -264,12 +260,13 @@ $icons-layout: smart;
   background-color: #f0f0f0;
   text-align: center;
   padding-top: 49px;
+
   &__link, &__section {
     text-decoration: none;
     color: #978489;
     font-size: 15px;
     display: inline-block;
-    span {
+    &-designed-by {
       color: #ab6f80;
     }
   }
@@ -279,28 +276,30 @@ $icons-layout: smart;
   &__slider {
     position: relative;
   }
-  &__controls, &__slider .bx-prev, &__slider  .bx-next  {
+  &__slider .bx-prev, &__slider  .bx-next  {
     display: block;
     width: 0;
     right: 0;
     border: 20px solid transparent;
     position: absolute;
-    transform: translateX(-50%);
+    transform: translateY(-50%) rotate(-90deg);
     top: 50%;
     transition: 0.4s;
-    &_next, .bx-next {
-      border-left-color: #ab6f80;
-      right: 0;
-      &:hover {
-        border-left-color: lighten(#ab6f80, 15%);
-      }
+    font-size: 0;
+  }
+  &__slider  .bx-next {
+    border-top-color: #ab6f80;
+    right: 0;
+    &:hover {
+      border-top-color: lighten(#ab6f80, 15%);
     }
-    &_prev, .bx-prev {
-      border-right-color: #ab6f80;
-      left: 0;
-      &:hover {
-        border-right-color: lighten(#ab6f80, 15%);
-      }
+  }
+  &__slider .bx-prev {
+    border-top-color: #ab6f80;
+    left: 0;
+    transform: translateY(-50%) rotate(90deg);
+    &:hover {
+      border-top-color: lighten(#ab6f80, 15%);
     }
   }
 }
